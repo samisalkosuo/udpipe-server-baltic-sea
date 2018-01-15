@@ -48,7 +48,7 @@ You can use curl too:
 And to get CoNLL-U format from curl-call:
 
 - curl -F data=@data/swedish.txt -F model=se -F tokenizer= -F tagger= -F parser= http://127.0.0.1:8080/process | PYTHONIOENCODING=utf-8 python -c "import sys,json; sys.stdout.write(json.load(sys.stdin)['result'])"
-- Or use [scripts/get_conll.sh](scripts/get_conll.sh)
+- Or use [scripts/get_conllu.sh](scripts/get_conllu.sh)
   - *./scripts/get_conllu.sh fi data/finnish.txt*
 
 
