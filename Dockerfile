@@ -15,7 +15,8 @@ WORKDIR /udpipe/udpipe-master/src/rest_server
 
 #add language model
 ADD models/fi_20180111.model .
-ADD models/se_20180112.model .
+ADD models/sv_20180112.model .
+ADD models/lv_20180115.model .
 
 EXPOSE 8080
 
@@ -23,7 +24,9 @@ EXPOSE 8080
 #add language models to be started with server
 CMD ./udpipe_server 8080 fi \
 fi ./fi_20180111.model "Finnish model trained 2018-01-11 using https://github.com/UniversalDependencies/UD_Finnish" \
-se ./se_20180112.model "Swedish model trained 2018-01-11 using https://github.com/UniversalDependencies/UD_Swedish"
+sv ./sv_20180112.model "Swedish model trained 2018-01-11 using https://github.com/UniversalDependencies/UD_Swedish" \
+lv ./lv_20180115.model "Latvian model trained 2017-01-15 using https://github.com/UniversalDependencies/UD_Latvian"
+
 
 #CMD ["/bin/bash"]
 

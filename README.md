@@ -5,16 +5,7 @@ UDPipe REST server Docker image with language models of Baltic Sea coastal state
 
 Dockerfile builds UDPipe REST server with language models for Baltic Sea coastal states.
 
-Coastal states are:
-- [Denmark](https://en.wikipedia.org/wiki/Denmark)
-- [Estonia](https://en.wikipedia.org/wiki/Estonia)
-- [Finland](https://en.wikipedia.org/wiki/Finland)
-- [Germany](https://en.wikipedia.org/wiki/Germany)
-- [Latvia](https://en.wikipedia.org/wiki/Latvia)
-- [Lithuania](https://en.wikipedia.org/wiki/Lithuania)
-- [Poland](https://en.wikipedia.org/wiki/Poland)
-- [Russia](https://en.wikipedia.org/wiki/Russia)
-- [Sweden](https://en.wikipedia.org/wiki/Sweden)
+Coastal states are: [Denmark](https://en.wikipedia.org/wiki/Denmark), [Estonia](https://en.wikipedia.org/wiki/Estonia), [Finland](https://en.wikipedia.org/wiki/Finland), [Germany](https://en.wikipedia.org/wiki/Germany), [Latvia](https://en.wikipedia.org/wiki/Latvia), [Lithuania](https://en.wikipedia.org/wiki/Lithuania), [Poland](https://en.wikipedia.org/wiki/Poland), [Russia](https://en.wikipedia.org/wiki/Russia), [Sweden](https://en.wikipedia.org/wiki/Sweden).
 
 All training files are from [Universal Dependencies](https://github.com/UniversalDependencies/).
 
@@ -22,7 +13,7 @@ All language models have trained using instructions in [udpipe-rest-server-docke
 
 Model filenames indicate the date when the model was trained.
 
-## Usage
+## Docker image
 
 There is Docker image available from DockerHub.
 
@@ -38,7 +29,7 @@ Or, clone this repo and build your own image
 
 - docker build -t udpipe-server-baltic-sea .
 
-## REST server API
+## Using REST server API
 
 See [UDPipe REST API docs](http://lindat.mff.cuni.cz/services/udpipe/api-reference.php).
 
@@ -51,10 +42,22 @@ In short, after you have Docker image running in localhost:
 
 You can use curl too:
 
-- curl -F data=@data/finnish.txt -F tokenizer= -F tagger= -F parser= http://127.0.0.1:8080/process
+- curl -F data=@data/finnish.txt -F model=fi -F tokenizer= -F tagger= -F parser= http://127.0.0.1:8080/process
 - curl -F data=@data/swedish.txt -F model=se -F tokenizer= -F tagger= -F parser= http://127.0.0.1:8080/process
 
 And to get CoNLL-U format from curl-call:
 
 - curl -F data=@data/swedish.txt -F model=se -F tokenizer= -F tagger= -F parser= http://127.0.0.1:8080/process | PYTHONIOENCODING=utf-8 python -c "import sys,json; sys.stdout.write(json.load(sys.stdin)['result'])"
+- Or use [scripts/get_conll.sh](scripts/get_conll.sh)
+  - *./scripts/get_conllu.sh fi data/finnish.txt*
 
+
+## Disclaimer
+
+Everything in this repo, including all code is "AS IS". No support, no warranty, no fitness for any purpose, nothing is expressed or implied, not by me (nor my employer).
+
+## License
+
+I am not sure what license to apply, so I don't claim any licensing.
+
+If you want to know more and be sure, please seek legal advice.
