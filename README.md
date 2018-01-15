@@ -19,11 +19,11 @@ There is Docker image available from DockerHub.
 
 Pull image:
 
-- docker pull 
+- docker pull kazhar/udpipe-server-baltic-sea
 
 Start image
 
-- docker run -d --restart always -p 0.0.0.0:8080:8080 kazhar/
+- docker run -d --restart always -p 0.0.0.0:8080:8080 kazhar/udpipe-server-baltic-sea
 
 Or, clone this repo and build your own image
 
