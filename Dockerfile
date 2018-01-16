@@ -13,13 +13,14 @@ RUN make server
 
 WORKDIR /udpipe/udpipe-master/src/rest_server
 
-#add language model
+#add language models
 ADD models/fi_20180111.model .
 ADD models/sv_20180112.model .
 ADD models/lv_20180115.model .
 ADD models/et_20180115.model .
 ADD models/lt_20180115.model .
 ADD models/pl_20180115.model .
+ADD models/ru_20180116.model .
 
 EXPOSE 8080
 
@@ -31,7 +32,8 @@ sv ./sv_20180112.model "Swedish model trained 2018-01-11 using https://github.co
 lv ./lv_20180115.model "Latvian model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Latvian" \
 et ./et_20180115.model "Estonian model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Estonian" \
 lt ./lt_20180115.model "Lithuanian model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Lithuanian" \
-pl ./pl_20180115.model "Polish model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Polish"
+pl ./pl_20180115.model "Polish model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Polish" \
+ru ./ru_20180116.model "Russian model trained 2018-01-16 using https://github.com/UniversalDependencies/UD_Russian"
 
 #CMD ["/bin/bash"]
 
