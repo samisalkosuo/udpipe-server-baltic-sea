@@ -21,6 +21,7 @@ ADD models/et_20180115.model .
 ADD models/lt_20180115.model .
 ADD models/pl_20180115.model .
 ADD models/ru_20180116.model .
+ADD models/da_20180116.model .
 
 EXPOSE 8080
 
@@ -33,7 +34,8 @@ lv ./lv_20180115.model "Latvian model trained 2018-01-15 using https://github.co
 et ./et_20180115.model "Estonian model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Estonian" \
 lt ./lt_20180115.model "Lithuanian model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Lithuanian" \
 pl ./pl_20180115.model "Polish model trained 2018-01-15 using https://github.com/UniversalDependencies/UD_Polish" \
-ru ./ru_20180116.model "Russian model trained 2018-01-16 using https://github.com/UniversalDependencies/UD_Russian"
+ru ./ru_20180116.model "Russian model trained 2018-01-16 using https://github.com/UniversalDependencies/UD_Russian" \
+da ./da_20180116.model "Danish model trained 2018-01-16 using https://github.com/UniversalDependencies/UD_Danish"
 
 #CMD ["/bin/bash"]
 
