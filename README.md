@@ -37,7 +37,7 @@ In short, after you have Docker image running in localhost:
 
 - Get a list of available models: [http://127.0.0.1:8080/models](http://127.0.0.1:8080/models).
 - Parse Finnish text: [http://127.0.0.1:8080/process?data=Hei%20maailma!Mit%C3%A4%20kuuluu?&tokenizer&tagger&parser&model=fi](http://127.0.0.1:8080/process?data=Hei%20maailma!Mit%C3%A4%20kuuluu?&tokenizer&tagger&parser&model=fi).
-- Parse Swedish text: [http://127.0.0.1:8080/process?data=Sverige%20är%20en%20konstitutionell%20monarki%20med%20parlamentarisk%20demokrati%20och%20utvecklad%20ekonomi.&tokenizer&tagger&parser&model=se](http://127.0.0.1:8080/process?data=Sverige%20är%20en%20konstitutionell%20monarki%20med%20parlamentarisk%20demokrati%20och%20utvecklad%20ekonomi.&tokenizer&tagger&parser&model=se).
+- Parse Swedish text: [http://127.0.0.1:8080/process?data=Sverige%20är%20en%20konstitutionell%20monarki%20med%20parlamentarisk%20demokrati%20och%20utvecklad%20ekonomi.&tokenizer&tagger&parser&model=sv](http://127.0.0.1:8080/process?data=Sverige%20är%20en%20konstitutionell%20monarki%20med%20parlamentarisk%20demokrati%20och%20utvecklad%20ekonomi.&tokenizer&tagger&parser&model=sv).
 - and so on.
 
 You can use curl too:
